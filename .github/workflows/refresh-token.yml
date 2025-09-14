@@ -1,4 +1,4 @@
-name: Refresh Access Token and Update README
+name: Refresh Access Token
 
 on:
   schedule:
