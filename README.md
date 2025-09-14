@@ -56,6 +56,7 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 | Endpoint                 | Method | Description           |
 | ------------------------ | ------ | --------------------- |
 | `/v1/validate`           | GET/POST | Validate token      |
+| `/v1/refresh`            | GET/POST | Refresh token       |
 | `/v1/models`             | GET    | List available models |
 | `/v1/chat/completions`   | POST   | Chat completions      |
 | `/v1/images/generations` | POST   | Generate images       |
