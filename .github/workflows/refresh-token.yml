@@ -8,6 +8,8 @@ on:
 jobs:
   refresh-token:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -110,7 +112,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "🔄 Refresh token and update expires to ${{ steps.refresh.outputs.expires }}"
+          git commit -m "Refresh token and update expire time"
           git push
           echo "✅ Changes committed and pushed successfully"
 
