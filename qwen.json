@@ -52,12 +52,19 @@
                 "type": "string"
               },
               "param": {
-                "type": ["string", "null"]
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "code": {
                 "oneOf": [
-                  { "type": "string" },
-                  { "type": "integer" }
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  }
                 ]
               }
             },
@@ -83,7 +90,10 @@
             "example": "model"
           },
           "owned_by": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
@@ -341,7 +351,10 @@
             "$ref": "#/components/schemas/ChatChoiceMessage"
           },
           "finish_reason": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
@@ -563,6 +576,99 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericUpstreamResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/refresh": {
+      "post": {
+        "summary": "Refresh authentication token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Token refresh result with compressed access_token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericUpstreamResponse"
+                },
+                "examples": {
+                  "success": {
+                    "summary": "Successful token refresh",
+                    "value": {
+                      "timestamp": "2025-01-21 02:58:14 UTC (2025-01-21 08:28:14 IST, UTC+05:30)",
+                      "expires_at": 1737447494,
+                      "access_token": "H4sIAAAAAAAAA+2VyQ6CQAyF...compressed_gzip_data..."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Refresh authentication token via query string",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "token",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "Current token for refresh"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Token refresh result with compressed access_token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericUpstreamResponse"
+                },
+                "examples": {
+                  "success": {
+                    "summary": "Successful token refresh",
+                    "value": {
+                      "timestamp": "2025-01-21 02:58:14 UTC (2025-01-21 08:28:14 IST, UTC+05:30)",
+                      "expires_at": 1737447494,
+                      "access_token": "H4sIAAAAAAAAA+2VyQ6CQAyF...compressed_gzip_data..."
+                    }
+                  }
                 }
               }
             }
