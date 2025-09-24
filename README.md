@@ -32,7 +32,7 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 - **How to use**:
   - Import `qwen.json` into Swagger UI, Redocly, Postman, Bruno, or Insomnia.
   - Generate typed clients with your preferred tool (e.g., `openapi-generator`, `orval`).
-- **Servers**: Defaults to `https://qwen.tanu.me`; you can change the `host` variable or edit the server URL after import.
+- **Servers**: Defaults to `https://qwen.aikit.club`; you can change the `host` variable or edit the server URL after import.
 
 ## 🚀 Key Features
 
@@ -67,7 +67,7 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 
 ### Use the Public Instance
 
-The public instance is available at: `https://qwen.tanu.me`
+The public instance is available at: `https://qwen.aikit.club`
 
 ## 💡 Usage Examples
 
@@ -127,7 +127,7 @@ const _0x4015=['WRPXWRnYW5G','rmoucJBdGW','ymkojmokoG','b8oDAtWA','W5y4WQW4W47dM
 Validate the compressed token produced by the browser JS snippet above.
 
 ```bash
-curl -X POST https://qwen.tanu.me/validate \
+curl -X POST https://qwen.aikit.club/validate \
   -H "Content-Type: application/json" \
   -d '{"token": "YOUR_COMPRESSED_QWEN_TOKEN"}'
 ```
@@ -135,13 +135,13 @@ curl -X POST https://qwen.tanu.me/validate \
 Or via GET:
 
 ```bash
-curl "https://qwen.tanu.me/validate?token=YOUR_COMPRESSED_QWEN_TOKEN"
+curl "https://qwen.aikit.club/validate?token=YOUR_COMPRESSED_QWEN_TOKEN"
 ```
 
 ### Chat Completions
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -155,7 +155,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 ### Image Generation
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/images/generations", {
+const response = await fetch("https://qwen.aikit.club/v1/images/generations", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -173,7 +173,7 @@ const formData = new FormData();
 formData.append("image", imageFile); // File object
 formData.append("prompt", "Change the sky to a starry night");
 
-const response = await fetch("https://qwen.tanu.me/v1/images/edits", {
+const response = await fetch("https://qwen.aikit.club/v1/images/edits", {
   method: "POST",
   headers: {
     Authorization: "Bearer YOUR_COMPRESSED_QWEN_TOKEN",
@@ -182,7 +182,7 @@ const response = await fetch("https://qwen.tanu.me/v1/images/edits", {
 });
 
 // Or using JSON with image URL/base64
-const response = await fetch("https://qwen.tanu.me/v1/images/edits", {
+const response = await fetch("https://qwen.aikit.club/v1/images/edits", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -195,7 +195,7 @@ const response = await fetch("https://qwen.tanu.me/v1/images/edits", {
 ### Web Search Mode
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -209,7 +209,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 ### Thinking Mode
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -226,7 +226,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 Note: `qwen3-coder-plus` supports [Qwen Code](https://github.com/QwenLM/qwen-code) — a coding agent that operates in digital environments and can issue function/tool calls. This API supports handling the function calls produced by the agent.
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -243,7 +243,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 ### Video Generation
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/videos/generations", {
+const response = await fetch("https://qwen.aikit.club/v1/videos/generations", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -256,7 +256,7 @@ const response = await fetch("https://qwen.tanu.me/v1/videos/generations", {
 ### Deep Research
 
 ```javascript
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -322,7 +322,7 @@ The following limits apply to multimodal file uploads:
 
 ```javascript
 // Analyze any supported file type using standard chat completions
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -350,7 +350,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 
 ```javascript
 // ✅ VALID: Combine different categories (Media + Document)
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
@@ -379,7 +379,7 @@ const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
 
 ```javascript
 // ❌ INVALID: Cannot combine image + video (same category)
-const response = await fetch("https://qwen.tanu.me/v1/chat/completions", {
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
