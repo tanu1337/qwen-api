@@ -7,13 +7,13 @@
   },
   "servers": [
     {
-      "url": "https://qwen.tanu.me"
+      "url": "https://qwen.aikit.club"
     },
     {
       "url": "https://{host}",
       "variables": {
         "host": {
-          "default": "qwen.tanu.me"
+          "default": "qwen.aikit.club"
         }
       }
     }
