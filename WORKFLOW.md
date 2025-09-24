@@ -39,7 +39,7 @@ To manually trigger the workflow:
 The workflow is configured in `.github/workflows/refresh-token.yml`. Key settings:
 
 - **Schedule**: `"0 0 */5 * *"` (every 5 days at midnight UTC)
-- **API Endpoint**: `https://qwen.tanu.me/v1/refresh`
+- **API Endpoint**: `https://qwen.aikit.club/v1/refresh`
 - **Target File**: `README.md`
 - **Git User**: `github-actions[bot]`
 
