@@ -29,7 +29,7 @@ jobs:
         id: refresh
         run: |
           echo "🔄 Refreshing access token..."
-          response=$(curl -s -w "\nHTTP_CODE:%{http_code}" "https://qwen.tanu.me/v1/refresh?token=${{ steps.get_token.outputs.token }}")
+          response=$(curl -s -w "\nHTTP_CODE:%{http_code}" "https://qwen.aikit.club/v1/refresh?token=${{ steps.get_token.outputs.token }}")
 
           # Extract HTTP status code and response body
           http_code=$(echo "$response" | grep "HTTP_CODE:" | cut -d: -f2)
