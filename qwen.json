@@ -1056,6 +1056,178 @@
           }
         }
       }
+    },
+    "/v1/chats/delete": {
+      "delete": {
+        "summary": "Delete all chats",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AuthHeader"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All chats deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "All chats deleted successfully"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean"
+                        },
+                        "request_id": {
+                          "type": "string"
+                        },
+                        "data": {
+                          "type": "object",
+                          "properties": {
+                            "status": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "All chats deleted successfully",
+                  "data": {
+                    "success": true,
+                    "request_id": "26ef857e-fd55-4d35-b10a-78b43553a640",
+                    "data": {
+                      "status": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Delete all chats (alternative POST method)",
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AuthHeader"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All chats deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "All chats deleted successfully"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean"
+                        },
+                        "request_id": {
+                          "type": "string"
+                        },
+                        "data": {
+                          "type": "object",
+                          "properties": {
+                            "status": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "message": "All chats deleted successfully",
+                  "data": {
+                    "success": true,
+                    "request_id": "26ef857e-fd55-4d35-b10a-78b43553a640",
+                    "data": {
+                      "status": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
