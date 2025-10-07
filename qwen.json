@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Qwen API Proxy (OpenAI-compatible)",
+    "title": "Qwen API Proxy",
     "version": "1.0.0",
     "description": "OpenAPI specification for the Qwen API Proxy. Endpoints are OpenAI-compatible and proxied to Qwen services."
   },
@@ -522,7 +522,7 @@
     },
     "/v1/validate": {
       "post": {
-        "summary": "Validate compressed token from JS snippet",
+        "summary": "Validate compressed token (via request body)",
         "requestBody": {
           "required": true,
           "content": {
@@ -557,7 +557,7 @@
         }
       },
       "get": {
-        "summary": "Validate compressed token via query string",
+        "summary": "Validate compressed token (via query parameter)",
         "parameters": [
           {
             "in": "query",
@@ -595,7 +595,7 @@
     },
     "/v1/refresh": {
       "post": {
-        "summary": "Refresh authentication token",
+        "summary": "Refresh authentication token (via request body)",
         "requestBody": {
           "required": true,
           "content": {
@@ -640,7 +640,7 @@
         }
       },
       "get": {
-        "summary": "Refresh authentication token via query string",
+        "summary": "Refresh authentication token (via query parameter)",
         "parameters": [
           {
             "in": "query",
@@ -1059,7 +1059,7 @@
     },
     "/v1/chats/delete": {
       "delete": {
-        "summary": "Delete all chats",
+        "summary": "Delete all chats (via DELETE method)",
         "security": [
           {
             "BearerAuth": []
@@ -1144,7 +1144,7 @@
         }
       },
       "post": {
-        "summary": "Delete all chats (alternative POST method)",
+        "summary": "Delete all chats (via POST method)",
         "security": [
           {
             "BearerAuth": []
