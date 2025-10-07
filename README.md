@@ -53,15 +53,16 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 
 ## 🛠️ Supported Endpoints
 
-| Endpoint                 | Method | Description           |
-| ------------------------ | ------ | --------------------- |
-| `/v1/validate`           | GET/POST | Validate token      |
-| `/v1/refresh`            | GET/POST | Refresh token       |
-| `/v1/models`             | GET    | List available models |
-| `/v1/chat/completions`   | POST   | Chat completions      |
-| `/v1/images/generations` | POST   | Generate images       |
-| `/v1/images/edits`       | POST   | Edit existing images  |
-| `/v1/videos/generations` | POST   | Generate videos       |
+| Endpoint                 | Method      | Description           |
+| ------------------------ | ----------- | --------------------- |
+| `/v1/validate`           | GET/POST    | Validate token        |
+| `/v1/refresh`            | GET/POST    | Refresh token         |
+| `/v1/models`             | GET         | List available models |
+| `/v1/chat/completions`   | POST        | Chat completions      |
+| `/v1/images/generations` | POST        | Generate images       |
+| `/v1/images/edits`       | POST        | Edit existing images  |
+| `/v1/videos/generations` | POST        | Generate videos       |
+| `/v1/chats/delete`       | DELETE/POST | Delete all chats      |
 
 ## 🚀 Quick Start
 
@@ -269,6 +270,16 @@ const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
     ],
     stream: false,
   }),
+});
+```
+
+### Delete All Chats
+
+```javascript
+// Using DELETE method
+const response = await fetch("https://qwen.aikit.club/v1/chats/delete", {
+  method: "DELETE", // GET and POST are also supported
+  headers: headers,
 });
 ```
 
