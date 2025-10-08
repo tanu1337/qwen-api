@@ -36,20 +36,22 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 
 ## 🚀 Key Features
 
-| Feature                     | Description                                             |
-| --------------------------- | ------------------------------------------------------- |
-| 🔁 **OpenAI Compatibility** | Drop-in replacement for OpenAI API calls                |
-| 💬 **Chat Completions**     | Text-based conversations with all Qwen models           |
-| 🎨 **Image Generation**     | Create stunning images from text prompts                |
-| ✏️ **Image Editing**        | Modify existing images with text instructions           |
-| 🎬 **Video Generation**     | Transform text into video content                       |
-| 🔬 **Deep Research**        | Comprehensive research with web search and citations    |
-| 🔍 **Web Search**           | Enable web search capabilities in conversations         |
-| 🧠 **Thinking Mode**        | Activate reasoning mode for complex problem solving     |
-| 👁️ **Vision Support**       | Analyze images, PDFs, and visual content                |
-| 📁 **Multimodal Files**     | Support for image, audio, video, and document uploads   |
-| 🌍 **CORS Support**         | Full cross-origin resource sharing support              |
-| ⚡ **Edge Performance**     | Lightning-fast global deployment |
+| Feature                     | Description                                               |
+| --------------------------- | --------------------------------------------------------- |
+| 🔁 **OpenAI Compatibility** | Drop-in replacement for OpenAI API calls                  |
+| 💬 **Chat Completions**     | Text-based conversations with all Qwen models             |
+| 🎨 **Image Generation**     | Create stunning images from text prompts                  |
+| ✏️ **Image Editing**        | Modify existing images with text instructions             |
+| 🎬 **Video Generation**     | Transform text into video content                         |
+| 🔬 **Deep Research**        | Comprehensive research with web search and citations      |
+| 👨🏻‍💻 **Web Development**      | Generate interactive web components and UI elements       |
+| 🏗️ **Full-Stack Apps**      | Complete application development from frontend to backend |
+| 🔍 **Web Search**           | Enable web search capabilities in conversations           |
+| 🧠 **Thinking Mode**        | Activate reasoning mode for complex problem solving       |
+| 👁️ **Vision Support**       | Analyze images, PDFs, and visual content                  |
+| 📁 **Multimodal Files**     | Support for image, audio, video, and document uploads     |
+| 🌍 **CORS Support**         | Full cross-origin resource sharing support                |
+| ⚡ **Edge Performance**     | Lightning-fast global deployment via Cloudflare Workers   |
 
 ## 🛠️ Supported Endpoints
 
@@ -63,6 +65,33 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 | `/v1/images/edits`       | POST        | Edit existing images  |
 | `/v1/videos/generations` | POST        | Generate videos       |
 | `/v1/chats/delete`       | DELETE/POST | Delete all chats      |
+
+## 🧠 Model Capabilities
+
+| Model Name                 | 👁️ Vision | 💡 Reasoning | 🌐 Web Search | 🔧 Tool Calling |
+| -------------------------- | --------- | ------------ | ------------- | --------------- |
+| QVQ-Max                    | ✅        | ✅           | ❌            | ❌              |
+| Qwen-Deep-Research         | ❌        | ✅           | ❌            | ❌              |
+| Qwen2.5-Max                | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-Next-80B-A3B         | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Plus               | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Turbo              | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-14B-Instruct-1M    | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-72B-Instruct       | ✅        | ✅           | ❌            | ❌              |
+| Qwen2.5-Coder-32B-Instruct | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Omni-7B            | ✅        | ❌           | ✅            | ❌              |
+| Qwen2.5-VL-32B-Instruct    | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-235B-A22B-2507       | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-30B-A3B-2507         | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-Coder                | ✅        | ❌           | ✅            | ✅              |
+| Qwen3-Coder-Flash          | ✅        | ❌           | ✅            | ❌              |
+| Qwen-Web-Dev               | ✅        | ❌           | ❌            | ❌              |
+| Qwen-Full-Stack            | ✅        | ❌           | ❌            | ❌              |
+| Qwen3-Max                  | ✅        | ❌           | ✅            | ❌              |
+| Qwen3-Omni-Flash           | ✅        | ✅           | ❌            | ❌              |
+| Qwen3-VL-235B-A22B         | ✅        | ✅           | ❌            | ❌              |
+| Qwen3-VL-30B-A3B           | ✅        | ✅           | ❌            | ❌              |
+| QWQ-32B                    | ❌        | ✅           | ✅            | ❌              |
 
 ## 🚀 Quick Start
 
@@ -272,6 +301,130 @@ const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   }),
 });
 ```
+
+### Web Development (qwen-web-dev)
+
+The `qwen-web-dev` model is specialized for frontend web development, creating interactive web components, HTML/CSS/JavaScript code, and providing live preview capabilities.
+
+**Features:**
+
+- HTML/CSS/JavaScript code generation
+- Interactive UI components
+- Responsive design support
+- Real-time preview generation
+- Framework support: React, Vue, Vanilla JS, HTML5
+- Styling: Tailwind CSS, Bootstrap
+
+```javascript
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify({
+    model: "qwen-web-dev",
+    messages: [
+      {
+        role: "user",
+        content:
+          "Create a responsive navigation bar with a logo, menu items, and a mobile hamburger menu using HTML, CSS, and vanilla JavaScript",
+      },
+    ],
+    stream: false,
+  }),
+});
+```
+
+**Example Output:**
+The model will generate complete, production-ready web components with:
+
+- Clean, semantic HTML structure
+- Modern CSS with responsive breakpoints
+- Vanilla JavaScript for interactivity
+- Mobile-first design approach
+- Accessibility considerations
+
+### Full-Stack Development (qwen-full-stack)
+
+The `qwen-full-stack` model handles complete application development, from frontend to backend, database design, API development, and system architecture.
+
+**Features:**
+
+- Frontend and backend code generation
+- Database schema design
+- RESTful and GraphQL API development
+- Authentication and authorization
+- Microservices architecture
+- Deployment-ready code
+- Multi-language support: JavaScript, TypeScript, Python, Java, Go, PHP
+- Frameworks: React, Vue, Angular, Node.js, Express, Django, Flask, Spring Boot
+
+```javascript
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify({
+    model: "qwen-full-stack",
+    messages: [
+      {
+        role: "user",
+        content:
+          "Create a complete REST API for a task management system with user authentication, CRUD operations for tasks, and a React frontend. Use Node.js/Express for the backend and MongoDB for the database.",
+      },
+    ],
+    stream: false,
+  }),
+});
+```
+
+**Example Full-Stack Application:**
+
+```javascript
+// Advanced example: Building a complete blog platform
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify({
+    model: "qwen-full-stack",
+    messages: [
+      {
+        role: "user",
+        content: `Build a complete blog platform with the following requirements:
+
+Backend (Node.js/Express):
+- User authentication with JWT
+- CRUD operations for blog posts
+- Comment system
+- Like/bookmark functionality
+- Image upload support
+- RESTful API endpoints
+
+Frontend (React):
+- Home page with post listings
+- Post detail page with comments
+- Create/Edit post interface
+- User profile page
+- Responsive design with Tailwind CSS
+
+Database (MongoDB):
+- User schema with authentication
+- Post schema with relationships
+- Comment schema
+- Proper indexing for performance`,
+      },
+    ],
+    stream: false,
+  }),
+});
+```
+
+**Key Differences:**
+
+| Feature          | qwen-web-dev                               | qwen-full-stack                    |
+| ---------------- | ------------------------------------------ | ---------------------------------- |
+| **Focus**        | Frontend UI/UX                             | Complete application stack         |
+| **Code Output**  | HTML, CSS, JavaScript                      | Frontend + Backend + Database      |
+| **Use Cases**    | Web components, landing pages, UI elements | Complete apps, APIs, microservices |
+| **Complexity**   | Simple to moderate                         | Moderate to complex                |
+| **Architecture** | Client-side only                           | Full system architecture           |
 
 ### Delete All Chats
 
