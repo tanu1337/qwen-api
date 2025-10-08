@@ -577,7 +577,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
   <p>
-    <sub>Built with ❤️ by the open-source community</sub>
+    Built with ❤️ by Tarun
   </p>
   <p>
     <sub>If you find this project useful, please consider giving it a ⭐ on GitHub!</sub>
