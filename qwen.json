@@ -7,10 +7,10 @@
   },
   "servers": [
     {
-      "url": "https://qwen.aikit.club"
+      "url": "https://qwen.aikit.club/v1"
     },
     {
-      "url": "https://{host}",
+      "url": "https://{host}/v1",
       "variables": {
         "host": {
           "default": "qwen.aikit.club"
@@ -470,7 +470,7 @@
     }
   },
   "paths": {
-    "/v1/models": {
+    "/models": {
       "get": {
         "summary": "List available models",
         "security": [
@@ -502,7 +502,7 @@
         }
       }
     },
-    "/v1/validate": {
+    "/validate": {
       "post": {
         "summary": "Validate compressed token (via request body)",
         "requestBody": {
@@ -575,7 +575,7 @@
         }
       }
     },
-    "/v1/refresh": {
+    "/refresh": {
       "post": {
         "summary": "Refresh authentication token (via request body)",
         "requestBody": {
@@ -668,7 +668,7 @@
         }
       }
     },
-    "/v1/chat/completions": {
+    "/chat/completions": {
       "post": {
         "summary": "Create chat completion (OpenAI-compatible)",
         "security": [
@@ -833,7 +833,7 @@
         }
       }
     },
-    "/v1/images/generations": {
+    "/images/generations": {
       "post": {
         "summary": "Generate an image from a text prompt",
         "security": [
@@ -889,7 +889,7 @@
         }
       }
     },
-    "/v1/images/edits": {
+    "/images/edits": {
       "post": {
         "summary": "Edit an image using a prompt",
         "security": [
@@ -963,7 +963,7 @@
         }
       }
     },
-    "/v1/videos/generations": {
+    "/videos/generations": {
       "post": {
         "summary": "Generate a video from a text prompt",
         "security": [
@@ -1019,7 +1019,7 @@
         }
       }
     },
-    "/v1/chats/delete": {
+    "/chats/delete": {
       "delete": {
         "summary": "Delete all chats (via DELETE method)",
         "security": [
