@@ -27,6 +27,8 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 
 ## 📘 OpenAPI Docs
 
+### API documentation : https://qwen-api.readme.io/
+
 - **Spec file**: `qwen.json` (OpenAPI 3.1.0)
 - **What it is**: OpenAPI-ready API documentation covering all endpoints, OpenAI-compatible request/response shapes, security, and examples.
 - **How to use**:
