@@ -388,7 +388,7 @@
         "properties": {
           "token": {
             "type": "string",
-            "description": "Compressed token produced by the README JS snippet"
+            "description": "Access token produced by the README JS snippet"
           }
         },
         "required": [
@@ -504,7 +504,7 @@
     },
     "/validate": {
       "post": {
-        "summary": "Validate compressed token (via request body)",
+        "summary": "Validate access token (via request body)",
         "requestBody": {
           "required": true,
           "content": {
@@ -539,7 +539,7 @@
         }
       },
       "get": {
-        "summary": "Validate compressed token (via query parameter)",
+        "summary": "Validate access token (via query parameter)",
         "parameters": [
           {
             "in": "query",
@@ -548,7 +548,7 @@
               "type": "string"
             },
             "required": true,
-            "description": "Compressed token from JS snippet"
+            "description": "Access token from JS snippet"
           }
         ],
         "responses": {
@@ -590,7 +590,7 @@
         },
         "responses": {
           "200": {
-            "description": "Token refresh result with compressed access_token",
+            "description": "Token refresh result with access_token",
             "content": {
               "application/json": {
                 "schema": {
@@ -602,7 +602,7 @@
                     "value": {
                       "timestamp": "2025-01-21 02:58:14 UTC (2025-01-21 08:28:14 IST, UTC+05:30)",
                       "expires_at": 1737447494,
-                      "access_token": "H4sIAAAAAAAAA+2VyQ6CQAyF...compressed_gzip_data..."
+                      "access_token": "eyJh....access_token..."
                     }
                   }
                 }
@@ -636,7 +636,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Token refresh result with compressed access_token",
+            "description": "Token refresh result with access_token",
             "content": {
               "application/json": {
                 "schema": {
@@ -648,7 +648,7 @@
                     "value": {
                       "timestamp": "2025-01-21 02:58:14 UTC (2025-01-21 08:28:14 IST, UTC+05:30)",
                       "expires_at": 1737447494,
-                      "access_token": "H4sIAAAAAAAAA+2VyQ6CQAyF...compressed_gzip_data..."
+                      "access_token": "eyJh....access_token..."
                     }
                   }
                 }
