@@ -121,10 +121,10 @@ For quick testing, you can use this temporary token until it expires.
 - Token:
 
 ```
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3ZGUyYzVlLTYzZDYtNDU2MC1iNmQ3LTI2MDk0NDhjZmJmNiIsImxhc3RfcGFzc3dvcmRfY2hhbmdlIjoxNzU5ODg4MzE5LCJleHAiOjE3NjA3NDUyOTJ9.IIGvD8amI-bwgADAPB2KuGijMkPUOj6MyIViKKWP4kI
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3ZGUyYzVlLTYzZDYtNDU2MC1iNmQ3LTI2MDk0NDhjZmJmNiIsImxhc3RfcGFzc3dvcmRfY2hhbmdlIjoxNzU5ODg4MzE5LCJleHAiOjE3NjA3NDg0MjV9.QOVWp1FjjRdUCQtFxep7r9N1xo3ujyGJa-OFPPe3x8k
 ```
 
-- Expires: 2025-10-13 00:57:06 UTC (2025-10-13 06:27:06 IST, UTC+05:30)
+- Expires: 2025-10-18 00:47:05 UTC (2025-10-18 06:17:05 IST, UTC+05:30)
 - Note: This token is for evaluation only and will stop working after the expiration time.
 
 ### How to Get Your Token
