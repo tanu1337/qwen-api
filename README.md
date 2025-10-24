@@ -92,6 +92,7 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 | Qwen3-Max                  | ✅        | ❌           | ✅            | ❌              |
 | Qwen3-Omni-Flash           | ✅        | ✅           | ❌            | ❌              |
 | Qwen3-VL-235B-A22B         | ✅        | ✅           | ❌            | ❌              |
+| Qwen3-VL-32B               | ✅        | ✅           | ❌            | ❌              |
 | Qwen3-VL-30B-A3B           | ✅        | ✅           | ❌            | ❌              |
 | QWQ-32B                    | ❌        | ✅           | ✅            | ❌              |
 
