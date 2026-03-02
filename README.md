@@ -48,6 +48,7 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 | 🔬 **Deep Research**        | Comprehensive research with web search and citations      |
 | 👨🏻‍💻 **Web Development**      | Generate interactive web components and UI elements       |
 | 🏗️ **Full-Stack Apps**      | Complete application development from frontend to backend |
+| 📊 **Slides Generation**    | Create professional presentations with AI-generated slides |
 | 🔍 **Web Search**           | Enable web search capabilities in conversations           |
 | 🧠 **Thinking Mode**        | Activate reasoning mode for complex problem solving       |
 | 👁️ **Vision Support**       | Analyze images, PDFs, and visual content                  |
@@ -72,29 +73,32 @@ Qwen API Proxy acts as a bridge between Qwen AI's proprietary API and the widely
 
 | Model Name                 | 👁️ Vision | 💡 Reasoning | 🌐 Web Search | 🔧 Tool Calling |
 | -------------------------- | --------- | ------------ | ------------- | --------------- |
-| QVQ-Max                    | ✅        | ✅           | ❌            | ❌              |
-| Qwen-Deep-Research         | ❌        | ✅           | ❌            | ❌              |
-| Qwen2.5-Max                | ✅        | ✅           | ✅            | ❌              |
-| Qwen3-Next-80B-A3B         | ✅        | ✅           | ✅            | ❌              |
-| Qwen2.5-Plus               | ✅        | ✅           | ✅            | ❌              |
-| Qwen2.5-Turbo              | ✅        | ✅           | ✅            | ❌              |
-| Qwen2.5-14B-Instruct-1M    | ✅        | ✅           | ✅            | ❌              |
-| Qwen2.5-72B-Instruct       | ✅        | ✅           | ❌            | ❌              |
-| Qwen2.5-Coder-32B-Instruct | ✅        | ✅           | ✅            | ❌              |
-| Qwen2.5-Omni-7B            | ✅        | ❌           | ✅            | ❌              |
-| Qwen2.5-VL-32B-Instruct    | ✅        | ✅           | ✅            | ❌              |
-| Qwen3-235B-A22B-2507       | ✅        | ✅           | ✅            | ❌              |
-| Qwen3-30B-A3B-2507         | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-Plus               | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-Flash              | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-397B-A17B          | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-122B-A10B          | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-35B-A3B            | ✅        | ✅           | ✅            | ❌              |
+| Qwen3.5-27B                | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-Max                  | ❌        | ✅           | ✅            | ❌              |
 | Qwen3-Coder                | ✅        | ❌           | ✅            | ✅              |
 | Qwen3-Coder-Flash          | ✅        | ❌           | ✅            | ❌              |
-| Qwen-Web-Dev               | ✅        | ❌           | ❌            | ❌              |
-| Qwen-Full-Stack            | ✅        | ❌           | ❌            | ❌              |
-| Qwen3-Max                  | ✅        | ❌           | ✅            | ❌              |
-| Qwen3-Omni-Flash           | ✅        | ✅           | ❌            | ❌              |
+| Qwen3-235B-A22B-2507       | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-30B-A3B-2507         | ✅        | ✅           | ✅            | ❌              |
+| Qwen3-Omni-Flash           | ✅        | ✅           | ✅            | ❌              |
 | Qwen3-VL-235B-A22B         | ✅        | ✅           | ❌            | ❌              |
-| Qwen3-VL-32B               | ✅        | ✅           | ❌            | ❌              |
+| Qwen3-VL-32B               | ✅        | ✅           | ✅            | ❌              |
 | Qwen3-VL-30B-A3B           | ✅        | ✅           | ❌            | ❌              |
-| QWQ-32B                    | ❌        | ✅           | ✅            | ❌              |
+| Qwen3-Next-80B-A3B         | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Max                | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Plus               | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Turbo              | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Coder-32B-Instruct | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-VL-32B-Instruct    | ✅        | ✅           | ✅            | ❌              |
+| Qwen2.5-Omni-7B            | ✅        | ❌           | ✅            | ❌              |
+| Qwen-Deep-Research         | ❌        | ✅           | ❌            | ❌              |
+| Qwen-Web-Dev               | ✅        | ✅           | ❌            | ❌              |
+| Qwen-Full-Stack            | ✅        | ✅           | ❌            | ❌              |
+| Qwen-Slides                | ✅        | ✅           | ❌            | ❌              |
 
 ## 🚀 Quick Start
 
