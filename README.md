@@ -179,6 +179,8 @@ curl "https://qwen.aikit.club/validate?token=YOUR_QWEN_ACCESS_TOKEN"
 
 ### Chat Completions
 
+> **⚠️ Important — Message History is Mandatory**: Always include the **full conversation history** in the `messages` array. This is essential for maintaining chat context and memory. Without it, every request is treated as a fresh, isolated message with no memory of previous exchanges.
+
 ```javascript
 const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
@@ -260,16 +262,16 @@ const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
 });
 ```
 
-### Code Generation (qwen3-coder-plus)
+### Code Generation (qwen3-coder)
 
-Note: `qwen3-coder-plus` supports [Qwen Code](https://github.com/QwenLM/qwen-code) — a coding agent that operates in digital environments and can issue function/tool calls. This API supports handling the function calls produced by the agent.
+Note: `qwen3-coder` supports [Roo Code](https://github.com/RooVetGit/Roo-Code) and [Qwen Code](https://github.com/QwenLM/qwen-code) — coding agents that operate in digital environments and can issue function/tool calls. Use `qwen3-coder` for Roo Code because it supports tool calling.
 
 ```javascript
 const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
   method: "POST",
   headers: headers,
   body: JSON.stringify({
-    model: "qwen3-coder-plus",
+    model: "qwen3-coder",
     tools: [{ type: "code" }],
     messages: [
       { role: "user", content: "Write a JavaScript function to add two numbers" },
