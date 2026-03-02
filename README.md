@@ -431,6 +431,64 @@ Database (MongoDB):
 | **Complexity**   | Simple to moderate                         | Moderate to complex                |
 | **Architecture** | Client-side only                           | Full system architecture           |
 
+### Slides Generation (qwen-slides)
+
+The `qwen-slides` model generates professional presentations with AI-generated slide images and a downloadable PDF. It researches the topic, creates content, and renders visual slides automatically.
+
+**Features:**
+
+- AI-powered slide content generation
+- Web search for up-to-date information
+- Auto-generated slide images for each page
+- Downloadable PDF of the full presentation
+- Thinking summary with research insights
+
+```javascript
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify({
+    model: "qwen-slides",
+    messages: [
+      {
+        role: "user",
+        content:
+          "Create a presentation on the history and future of artificial intelligence",
+      },
+    ],
+    stream: false,
+  }),
+});
+```
+
+**Example Output:**
+The response includes:
+
+- **Reasoning content**: Thinking summary with research insights
+- **Text content**: Written description of each slide
+- **Slide images**: Markdown image links for each generated slide
+- **PDF link**: A downloadable PDF of the complete presentation
+
+```javascript
+// Streaming example with thinking enabled
+const response = await fetch("https://qwen.aikit.club/v1/chat/completions", {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify({
+    model: "qwen-slides",
+    messages: [
+      {
+        role: "user",
+        content: "Make a 10-slide pitch deck for a SaaS startup that provides AI-powered customer support",
+      },
+    ],
+    stream: true,
+    enable_thinking: true,
+    thinking_budget: 30000,
+  }),
+});
+```
+
 ### Delete All Chats
 
 ```javascript
